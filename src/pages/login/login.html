@@ -1,0 +1,29 @@
+<ion-header class="bar-positive">
+
+  <ion-navbar class="bar-positive">
+
+    <ion-title ion-title color="assertive">login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list class="list list-inset">
+    <ion-item >
+      <ion-label class="item item-input" floating>Username</ion-label>
+      <ion-input #myUser type="text" [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label class="item item-input" floating>Password</ion-label>
+      <ion-input #mySenha type="password" [(ngModel)]="senha"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button ionic-item (click)="submit(myUser.value,mySenha.value)" ion-button color="assertive" block>
+    Sign in
+  </button>
+  <h1>{{respose}}</h1>
+  <h2>{{myUser.value}}</h2>
+  <h2>{{mySenha.value}}</h2>
+
+</ion-content>
