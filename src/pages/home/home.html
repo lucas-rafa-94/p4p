@@ -2,17 +2,25 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Map
+      Mapa
     </ion-title>
     <ion-buttons end>
-      <button ion-button (click)="addMarker()"><ion-icon name="add"></ion-icon>Add Marker</button>
+      <button ion-button (click)="addMarker()"><ion-icon name="add"></ion-icon>Marcação</button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <button ion-item (click)="ionViewLoaded()">
-      Map
+      Onde estou?
       </button>
+
+  <div>
+
+        <ion-input #endereco type="text" [(ngModel)]="username" placeholder="Endereço" padding></ion-input>
+        <button ionic-item (click)="buscaEnd(endereco.value)" ion-button color="assertive" block>
+          Buscar
+        </button>
+  </div>
   <div #map id="map"></div>
 </ion-content>
